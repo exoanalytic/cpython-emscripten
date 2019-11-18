@@ -2,7 +2,7 @@ lib/python3.6/_collections_abc.py
 lib/python3.6/_compression.py
 lib/python3.6/_dummy_thread.py
 lib/python3.6/_sitebuiltins.py
-lib/python3.6/_sysconfigdata.py
+lib/python3.6/_sysconfigdata__emscripten_.py
 lib/python3.6/_threading_local.py
 lib/python3.6/_weakrefset.py
 lib/python3.6/abc.py
@@ -56,3 +56,4 @@ lib/python3.6/types.py
 lib/python3.6/warnings.py
 lib/python3.6/weakref.py
 lib/python3.6/zipfile.py
+lib/python3.6/enum.py

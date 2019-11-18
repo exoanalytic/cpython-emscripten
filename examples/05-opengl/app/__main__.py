@@ -7,7 +7,7 @@ except ImportError:
 import math
 import time
 
-from . import sdl2
+import sdl2
 
 
 sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)

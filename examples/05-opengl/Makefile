@@ -1,9 +1,9 @@
 PYVERSION=3.6.4
 PYMINOR=$(basename $(PYVERSION))
 
-CC=emcc
+CC=em++
 OPTFLAGS=-O2
-CFLAGS=-std=gnu99 $(OPTFLAGS) -g -I ../../installs/python-$(PYVERSION)/include/python$(PYMINOR)/ -Wno-warn-absolute-paths -s USE_SDL=2
+CFLAGS=$(OPTFLAGS) -g -I ../../installs/python-$(PYVERSION)/include/python$(PYMINOR)/ -Wno-warn-absolute-paths -s USE_SDL=2
 LDFLAGS=$(OPTFLAGS) ../../installs/python-$(PYVERSION)/lib/libpython$(PYMINOR).a \
   -s TOTAL_MEMORY=268435456 \
   -s ASSERTIONS=2 \
