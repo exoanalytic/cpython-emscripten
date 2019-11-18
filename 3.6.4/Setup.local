@@ -28,3 +28,5 @@ _sha512 sha512module.c
 _md5 md5module.c
 
 #future_builtins future_builtins.c
+
+_csv _csv.c # functions to read comma separated values files

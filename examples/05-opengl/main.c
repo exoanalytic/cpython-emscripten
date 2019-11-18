@@ -3,13 +3,8 @@
 
 #include <emscripten.h>
 #include <Python.h>
+#include "builtins.h"
 
-
-#if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initsdl2(void);
-#else
-PyMODINIT_FUNC PyInit_sdl2(void);
-#endif
 
 
 static void onload(const char *filename) {
@@ -38,12 +33,8 @@ static void onloaderror(const char *filename) {
 int main(int argc, char** argv) {
     setenv("PYTHONHOME", "/", 0);
 
+    PyImport_ExtendInittab(builtins);
     Py_InitializeEx(0);
-#if PY_MAJOR_VERSION < 3
-    initsdl2();
-#else
-    PyInit_sdl2();
-#endif
 
     // Fetch app.zip from the server.
     emscripten_async_wget("app.zip", "/app.zip", onload, onloaderror);
