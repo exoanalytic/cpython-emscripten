@@ -34,5 +34,5 @@ Marat Dukhan on the [EmCPython](https://github.com/PeachPy/EmCPython) project.
 # Python Versions
 
 ## 3.5.2
-
+## 3.6.4
 
